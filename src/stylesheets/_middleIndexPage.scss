@@ -1,0 +1,283 @@
+@import "vars";
+@import "mixins";
+
+.promo {
+  display: flex;
+  background: #f1e4e6;
+  padding-left: calc(50% - 800px);
+  padding-right: calc(50% - 800px);
+
+  &__img {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__content {
+    padding-left: 64px;
+  }
+
+  &__info {
+    border-left: 12px solid $corporateColor;
+    padding-left: 16px;
+    margin-top: 290px;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;
+    color: $headerAndFooterBackgroundColor;
+  }
+
+  &__heading {
+    color: $headerAndFooterBackgroundColor;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__heading__color {
+    color: $corporateColor;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.sale {
+  display: grid;
+  justify-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 65px;
+  padding-bottom: 96px;
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  &__item:hover > img {
+    filter: brightness(1.7);
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    @include displayFlexCenter;
+    flex-direction: column;
+  }
+
+  &__item__big {
+    grid-column: 1 / -1;
+  }
+
+  &__item__big__img {
+    min-height: 180px;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  &__heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: $corporateColor;
+  }
+}
+
+.product-box {
+  padding-bottom: 48px;
+
+  &__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: $headerAndFooterBackgroundColor;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    margin-top: 6px;
+    color: #9f9f9f;
+  }
+
+  &__content {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.product {
+  position: relative;
+  cursor: pointer;
+
+  &:hover &__img {
+    filter: brightness(0.5);
+  }
+
+  &:hover &__img__div {
+    filter: brightness(0.5);
+  }
+
+  &:hover &__add {
+    display: flex;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__add {
+    position: absolute;
+    top: 188px;
+    left: 111px;
+    border: 1px solid #fff;
+    width: 139px;
+    height: 44px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    color: #ffffff;
+  }
+
+  &__add:hover {
+    box-shadow: 0 0 5px #fff;
+  }
+
+  &__add:hover svg path {
+    fill: $corporateColor;
+  }
+
+  &__img__div {
+    padding-top: 9px;
+    padding-right: 110px;
+    padding-bottom: 11px;
+    padding-left: 108px;
+    background-color: #f7e4e2;
+  }
+
+  &__content {
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  &__heading {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000000;
+  }
+
+  &__text {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5d5d5d;
+  }
+
+  &__price {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $corporateColor;
+  }
+}
+
+.button_box {
+  @include displayFlexCenter;
+  margin-bottom: 100px;
+}
+
+.button {
+  width: 212px;
+  height: 48px;
+  @include displayFlexCenter;
+  border: 1px solid $corporateColor;
+  background: #fff;
+  color: $corporateColor;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.4s;
+
+  &:hover {
+    color: #fff;
+    background-color: $corporateColor;
+  }
+}
+
+.advantages {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  background-color: $headerAndFooterBackgroundColor;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  &__content {
+    display: grid;
+    justify-items: center;
+    width: 360px;
+  }
+
+  &__cont__header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fbfbfb;
+    text-align: center;
+  }
+
+  &__cont__text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    color: #fbfbfb;
+    opacity: 70%;
+    text-align: center;
+  }
+}

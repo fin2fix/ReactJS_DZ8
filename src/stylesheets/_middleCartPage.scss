@@ -1,0 +1,253 @@
+@import "vars";
+@import "mixins";
+
+.basket-box {
+  margin-top: 100px;
+  display: flex;
+  gap: 120px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 652px;
+    gap: 40px;
+  }
+  &__product {
+    display: flex;
+    gap: 40px;
+    box-shadow: 17px 19px 24px 0px #00000021;
+  }
+
+  &__img {
+    width: 262px;
+  }
+
+  &__img-div {
+    width: 262px;
+    @include displayFlexCenter;
+    background-color: #f7e4e2;
+  }
+
+  &__img-inside {
+    height: 306px;
+  }
+
+  &__info {
+    padding-top: 24px;
+    padding-right: 24px;
+  }
+
+  &__heading-box {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+  }
+
+  &__heading {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__text-box {
+    padding-top: 24px;
+  }
+
+  &__text {
+    margin-bottom: 8px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #575757;
+  }
+
+  &__text-price {
+    margin-left: 4px;
+    color: $corporateColor;
+  }
+
+  &__text-other {
+    margin-left: 4px;
+  }
+
+  &__input {
+    width: 44px;
+    height: 25px;
+    padding-left: 12px;
+    margin-left: 24px;
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #575757;
+  }
+
+  &__buttons {
+    margin-top: 48px;
+    margin-bottom: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__button {
+    width: 235px;
+    height: 50px;
+    @include displayFlexCenter;
+    border: 1px solid #575757;
+    background: #fff;
+    color: #575757;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  &__button:hover {
+    color: #fff;
+    background-color: $corporateColor;
+    border: 1px solid $corporateColor;
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__form-box {
+    height: 306px;
+  }
+
+  &__form-head {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    opacity: 0.7;
+    margin-bottom: 24px;
+  }
+
+  &__form-input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__form-input {
+    width: 360px;
+    height: 45px;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    border: 1px solid #a4a4a4;
+  }
+
+  &__form-input::placeholder {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__form-button {
+    width: 100px;
+    height: 35px;
+    @include displayFlexCenter;
+    border: 1px solid #a4a4a4;
+    background: #fff;
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  &__form-button:hover {
+    color: #fff;
+    background-color: $corporateColor;
+    border: 1px solid $corporateColor;
+  }
+
+  &__proceed {
+    height: 214px;
+    padding: 43px;
+    box-sizing: border-box;
+    background-color: #f5f3f3;
+  }
+
+  &__proceed-subtotal {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+
+  &__sum-subtotal {
+    margin-left: 24px;
+  }
+
+  &__proceed-total {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+
+  &__sum-total {
+    margin-left: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: $corporateColor;
+  }
+
+  &__line {
+    margin-top: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #e2e2e2;
+  }
+
+  &__proceed-button {
+    width: 273px;
+    height: 50px;
+    @include displayFlexCenter;
+    border: 1px solid $corporateColor;
+    background: #f5f3f3;
+    color: $corporateColor;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  &__proceed-button:hover {
+    color: #fff;
+    background-color: $corporateColor;
+    border: 1px solid $corporateColor;
+  }
+}

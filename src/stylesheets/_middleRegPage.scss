@@ -1,0 +1,163 @@
+@import "vars";
+@import "mixins";
+
+.reg-box {
+  margin-top: 70px;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__form-heading {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__input {
+    width: 360px;
+    height: 45px;
+    border: 1px solid #a4a4a4;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: border-box;
+  }
+
+  &__input::placeholder {
+    color: #b1b1b1;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__radio-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  &__label {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  &__label:last-child {
+    display: none;
+  }
+
+  &__label input[type="radio"] {
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #999;
+    border-radius: 50%;
+    outline: none;
+    //box-shadow: 0 0 5px #999;
+    transition: box-shadow 0.3s ease;
+    vertical-align: middle;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  &__label input[type="radio"]:before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+  }
+
+  &__label input[type="radio"]:checked:before {
+    background: $corporateColor;
+  }
+
+  &__text {
+    width: 359px;
+    color: #b1b1b1;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__form-button {
+    margin-top: 20px;
+    width: 167px;
+    height: 50px;
+    @include displayFlexCenter;
+    gap: 8px;
+    border: 1px solid $corporateColor;
+    background: #fff;
+    color: $corporateColor;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+
+  &__form-button path {
+    fill: $corporateColor;
+    transition: all 0.4s;
+  }
+
+  &__form-button:hover {
+    color: #fff;
+    background-color: $corporateColor;
+    border: 1px solid $corporateColor;
+  }
+
+  &__form-button:hover path {
+    fill: #fff;
+  }
+
+  &__info {
+    width: 652px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__content,
+  &__list {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__list {
+    list-style-type: none;
+    margin-bottom: 8px;
+  }
+}
+
+.tick-mark-before::before {
+  content: url(../public/img/Tick_mark.svg);
+  margin-right: 16px;
+}

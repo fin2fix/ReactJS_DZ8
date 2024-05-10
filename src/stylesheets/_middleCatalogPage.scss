@@ -1,0 +1,110 @@
+@import "vars";
+@import "mixins";
+
+.filter {
+  width: 100%;
+  padding: 13px 16px 16px 0px;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+
+  &-box {
+    position: relative;
+    height: 40px;
+    width: 360px;
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+  }
+
+  &__link:hover {
+    color: $corporateColor;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    gap: 11px;
+  }
+
+  &-sort {
+    padding-top: 39px;
+    display: flex;
+    gap: 30px;
+  }
+
+  &__summary {
+    display: flex;
+    gap: 11px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &[open] {
+    background: #ffffff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 13px 16px 16px;
+  }
+
+  &[open] &__summary {
+    color: $corporateColor;
+  }
+
+  &[open] &__img path {
+    fill: $corporateColor;
+  }
+
+  &__category {
+    margin-top: 16px;
+  }
+
+  &__category-summary {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6f6e6e;
+    padding: 8px 11px 11px;
+    border-left: 5px solid $corporateColor;
+    border-bottom: 1px solid #ebebeb;
+    list-style: none;
+  }
+
+  &__category[open] &__category-summary {
+    color: $corporateColor;
+  }
+}
+
+.selector {
+  @include displayFlexCenter;
+  margin-bottom: 80px;
+
+  &__page {
+    width: 284px;
+    height: 44px;
+    gap: 16px;
+    border: 1px solid #ebebeb;
+    border-radius: 4px;
+    @include displayFlexCenter;
+  }
+  &__page__item {
+    color: #5d5d5d;
+    opacity: 70%;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  &__page__item:hover {
+    color: $corporateColor;
+    font-weight: bold;
+  }
+}
