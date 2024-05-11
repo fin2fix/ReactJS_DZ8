@@ -1,14 +1,18 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addBasket } from "../Reducers/BasketSlice";
-import React from "react";
+import React, { useContext } from "react";
+import { FilterContext } from "../Context/FilterContext";
+import withFilter from "../hoc/withFilter";
 
 export default function ProductList() {
   const products = useSelector((state) => state.productList.array);
   const dispatch = useDispatch();
+  const filter = useContext(FilterContext);
+  const filteredProducts = withFilter(products, filter);
 
   return (
     <>
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <div key={product.id} class="product">
           <img
             class={
