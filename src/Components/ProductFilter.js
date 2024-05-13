@@ -26,24 +26,30 @@ const ProductFilter = () => {
         </svg>
       </summary>
       <div class="sort__content sort__content__mobile">
-        <label class="sort__label" value={filter} onChange={handleChange}>
+        <label class="sort__label">
+          <input type="checkbox" value="ALL" checked /> <span>ALL</span>
+        </label>
+        <label class="sort__label">
           <input type="checkbox" value="XS" /> <span>XS</span>
         </label>
-        <label class="sort__label" value={filter} onChange={handleChange}>
+        <label class="sort__label">
           <input type="checkbox" value="S" /> <span>S</span>
         </label>
-        <label class="sort__label" value={filter} onChange={handleChange}>
+        <label class="sort__label">
           <input type="checkbox" value="M" /> <span>M</span>
         </label>
-        <label class="sort__label" value={filter} onChange={handleChange}>
+        <label class="sort__label">
           <input type="checkbox" value="L" /> <span>L</span>
         </label>
-        <label class="sort__label" value={filter} onChange={handleChange}>
+        <label class="sort__label">
           <input type="checkbox" value="XL" /> <span>XL</span>
         </label>
-        <label class="sort__label" value={filter} onChange={handleChange}>
+        <label class="sort__label">
           <input type="checkbox" value="XXL" /> <span>XXL</span>
         </label>
+        <button value={filter} onClick={handleChange}>
+          Submit
+        </button>
       </div>
     </details>
   );
